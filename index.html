@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/icons8-coronavirus-64.png">
+    <title>COVID19|PH Tracker</title>
+  </head>
+  <body data-spy="scroll" data-offset="0" data-target="#myNavbar">
+    <!-- Navigation Bar -->
+    <nav
+      id="myNavbar"
+      class="navbar navbar-default navbar-inverse navbar-fixed-top"
+      role="navigation"
+    >
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="container">
+        <!-- Menu responsivo -->
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span><span class="icon-bar"></span
+            ><span class="icon-bar"></span>
+          </button>
+          <!-- Logo -->
+          <a class="navbar-brand myLogo" href="#">COVID-19<span> PH</span></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#aboutme">Global Cases</a></li>
+            <li><a href="#contact">News</a></li>
+            <li><a href="#portfolio">How to prevent</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- All Content Page -->
+    <div id="myPageContent" class="container-fluid">
+      <section id="home">
+        <div class="heroimage">
+          <div class="captioncontainer">
+            <h1 class="captiontitle">
+              COVID 19 PH
+            </h1>
+            <h2 class="captiontitle">
+              Tracker
+            </h2>
+          </div>
+        </div>
+      </section>
+      <div class="maincontainer">
+        <section>
+          <br />
+          <div class="container">
+            <H1>Today <small><span id="datetime"></span></small></H1>
+              <h5><small class="text-danger">*The data will update every 10 minutes</small></h5>
+            <div class="row">
+              <div class="col-sm-4 col-md-6">
+                <div class="panel panel-info">
+                  <div class="panel-heading"><h2>Confirmed Cases</h2></div>
+                  <div class="panel-body">
+                    <h3><span id="lon"></span></h3>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-md-6">
+                <div class="panel panel-danger">
+                  <div class="panel-heading"><h2>Deaths</h2></div>
+                  <div class="panel-body">
+                    <h3><span id="lat" class="numbers"></span></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <h1>All Time PH Data<h6><small>*since 1st case</small></h6></h1>
+            <div class="row">
+              <div class="col-sm-6 col-sm-4">
+                <div class="panel panel-info">
+                  <div class="panel-heading"><h2>Confirmed Cases</h2></div>
+                  <div class="panel-body">
+                    <h3><span id="pcases"></span></h3>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-sm-4">
+                <div class="panel panel-success">
+                  <div class="panel-heading"><h2>Recovered</h2></div>
+                  <div class="panel-body">
+                    <h3><span id="precovered"></span></h3>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-sm-4">
+                <div class="panel panel-danger">
+                  <div class="panel-heading"><h2>Deaths</h2></div>
+                  <div class="panel-body">
+                    <h3><span id="pdeaths"></span></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 col-sm-4">
+                <div class="panel panel-primary">
+                  <div class="panel-heading"><h2>Test Conducted</h2></div>
+                  <div class="panel-body">
+                    <h3><span id="ptests"></span></h3>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-sm-4">
+                <div class="panel panel-warning">
+                  <div class="panel-heading"><h2>Active Cases</h2></div>
+                  <div class="panel-body">
+                    <h3><span id="pactive"></span></h3>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-sm-4">
+                <div class="panel panel-danger">
+                  <div class="panel-heading"><h2>Critical</h2></div>
+                  <div class="panel-body">
+                    <h3><span id="pcritical"></span></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>    
+        </section>
+        <section id="aboutme">
+          <br>
+          <br>
+          <div class="container">
+            <h1>
+              GLObal
+            </h1>
+          <div class="row">
+            <div class="col-sm-4 col-md-6">
+              <div class="panel panel-info">
+                <div class="panel-heading"><h2>Today Confirmed Cases</h2></div>
+                <div class="panel-body">
+                  <h3><span id="gtodayCases"></span></h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 col-md-6">
+              <div class="panel panel-danger">
+                <div class="panel-heading"><h2>Today Deaths</h2></div>
+                <div class="panel-body">
+                  <h3><span id="gtodayDeaths" class="numbers"></span></h3>
+                </div>
+              </div>
+            </div>
+          </div>
+            <div class="row">
+              <div class="col-sm-6 col-sm-4">
+                <div class="panel panel-info">
+                  <div class="panel-heading"><h2>Confirmed Cases</h2></div>
+                  <div class="panel-body">
+                    <h3><span id="gcases"></span></h3>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-sm-4">
+                <div class="panel panel-success">
+                  <div class="panel-heading"><h2>Recovered</h2></div>
+                  <div class="panel-body">
+                    <h3><span id="grecovered"></span></h3>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-sm-4">
+                <div class="panel panel-danger">
+                  <div class="panel-heading"><h2>Deaths</h2></div>
+                  <div class="panel-body">
+                    <h3><span id="gdeaths"></span></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 col-sm-4">
+                <div class="panel panel-primary">
+                  <div class="panel-heading"><h2>Test Conducted</h2></div>
+                  <div class="panel-body">
+                    <h3><span id="gtests"></span></h3>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-sm-4">
+                <div class="panel panel-warning">
+                  <div class="panel-heading"><h2>Active Cases</h2></div>
+                  <div class="panel-body">
+                    <h3><span id="gactive"></span></h3>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-sm-4">
+                <div class="panel panel-danger">
+                  <div class="panel-heading"><h2>Critical</h2></div>
+                  <div class="panel-body">
+                    <h3><span id="gcritical"></span></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <br>
+        <section id="contact">
+            <div class="container">
+              <h1 class="text-center">Get The Latest Philippines Covid 19 News</h1><br>
+            <div class="row">
+              <div class="col-sm-6 col-md-4 ">
+                <div class="panel panel-info ">
+                  <div class="panel-heading"></div>
+                  <div class="panel-body">
+                    <a class="twitter-timeline" data-height="600" data-theme="light" href="https://twitter.com/WHOPhilippines?ref_src=twsrc%5Etfw">Tweets by WHOPhilippines</a> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="panel panel-info">
+                  <div class="panel-heading"></div>
+                  <div class="panel-body">
+                    <a class="twitter-timeline" data-height="600" href="https://twitter.com/DOHgovph?ref_src=twsrc%5Etfw">Tweets by DOHgovph</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="panel panel-info">
+                  <div class="panel-heading"></div>
+                  <div class="panel-body">
+                    <a class="twitter-timeline" data-height="600" href="https://twitter.com/Covid19Ph?ref_src=twsrc%5Etfw">Tweets by Covid19Ph</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          <br>
+        </section>
+        <section id="portfolio">
+            <div class="subcontainer">
+              <div class="panel-body">
+                <h2 class="text-center">How to Prevent Covid19 VIRUS</h2><hr>
+              </div>
+              <div class="container">
+                <div class="col-xs-11">
+                  <dl class="dl-horizontal">
+                    <dt><img src="/img/hand-wash.png" width="50px"></dt>
+                    <dd>Regularly and thoroughly clean your hands with an alcohol-based hand rub or wash them with soap and water.</dd>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt><img src="/img/social-distancing.png" width="50px"></dt>
+                    <dd>Maintain at least 1 metre (3 feet) distance between yourself and others. If you are too close, you can breathe in the droplets, including the COVID-19 virus if the person has the disease.</dd>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt><img src="/img/social-distancing.png" width="50px"></dt>
+                    <dd>Maintain at least 1 metre (3 feet) distance between yourself and others. If you are too close, you can breathe in the droplets, including the COVID-19 virus if the person has the disease.</dd>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt><img src="/img/distance.png" width="50px"></dt>
+                    <dd>Avoid going to crowded places. </dd>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt><img src="/img/face.png" width="50px"></dt>
+                    <dd>Avoid touching eyes, nose and mouth. Hands touch many surfaces and can pick up viruses. Once contaminated, hands can transfer the virus to your eyes, nose or mouth. From there, the virus can enter your body and infect you.</dd>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt><img src="/img/coronavirus.png" width="50px"></dt>
+                    <dd>Make sure you, and the people around you, follow good respiratory hygiene. This means covering your mouth and nose with your bent elbow or tissue when you cough or sneeze. Then dispose of the used tissue immediately and wash your hands.</dd>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt><img src="/img/stay-home.png" width="50px"></dt>
+                    <dd>Stay home and self-isolate even with minor symptoms such as cough, headache, mild fever, until you recover. Have someone bring you supplies. If you need to leave your house, wear a mask to avoid infecting others.</dd>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt><img src="/img/hospital.png" width="50px"></dt>
+                    <dd>If you have a fever, cough and difficulty breathing, seek medical attention, but call by telephone in advance if possible and follow the directions of your local health authority.</dd>
+                  </dl>
+                  <dl class="dl-horizontal">
+                    <dt><img src="/img/blog.png" width="50px"></dt>
+                    <dd>Keep up to date on the latest information from trusted sources, such as WHO or your local and national health authorities.</dd>
+                  </dl>
+                  <h6 class="igid"><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public">*sources WHO</a></h6> 
+                </div>
+          </div>
+        </section>
+         <br>
+      </div>
+      <button id="toTop" onclick='window.scrollTo({top: 0, behavior: "smooth"});'><img src="/img/top.png"></button>
+      <footer>
+        <div class="row">
+        <div class="container col-sm-2">
+          <ul>
+            <h6><strong>Sources:</strong></h6>
+            <li><h6><small><a href="https://www.who.int/">WHO</a></small></h6></li>
+            <li><h6><small><a href="https://twitter.com/home">Twitter</a></small></h6></li>
+            <li><h6><small><a href="https://disease.sh/">API</a></small></h6></li>
+          </ul>
+        </div>
+        <h1 class="col-sm-8">STAY HOME. SAVE LIVES.</h1>
+        
+      </div>
+      <h5>Copyright-free © Aug/2020 <a href="https://kitkityanihh.github.io/myweb/index.html">kitkityanihh </a></h5>
+      <a href="https://www.facebook.com/kitkityanihh"><img class="icon" src="/img/facebook.png"> </a> <a href="https://github.com/kitkityanihh"><img class="icon" src="/img/github.png" style="color: rgb(104, 104, 104);"> </a>
+      </footer>
+    </div>
+
+<script>
+var dt = new Date();
+document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"/"+ (("0"+(dt.getMonth()+1)).slice(-2)) +"/"+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
+</script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>
